@@ -29,20 +29,17 @@ from lxml.etree import XML
 
 class TestTask(TestCase):
 
-    @unittest.skip('???')
     def test_default_task_from_store_is_new(self):
         task = TaskStore().new()
 
         self.assertTrue(task.is_new())
 
-    @unittest.skip('???')
     def test_task_with_content_is_not_new(self):
         task = TaskStore().new()
         task.content = 'foobar'
 
         self.assertFalse(task.is_new())
 
-    @unittest.skip('???')
     def test_task_with_title_is_not_new(self):
         task = TaskStore().new(title='My new task')
 
