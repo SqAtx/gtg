@@ -1,8 +1,7 @@
 # Generate a development Flatpak every friday at midnight
 
 on:
-  schedule:
-  - cron: "0 0 * * 5"
+  workflow_dispatch:
 
 name: Weekly Development Flatpak
 jobs:
